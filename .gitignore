@@ -9,6 +9,10 @@ nvim/.config/nvim/.netrwhist
 .idea/
 .vscode/
 
+# oh-my-claudecode session artifacts
+.omc/
+.claude/
+
 # Old Hyprland bits intentionally not ported
 hypr/
 waybar/
