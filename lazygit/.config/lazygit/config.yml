@@ -1,0 +1,11 @@
+gui:
+  theme:
+    activeBorderColor:
+      - magenta
+      - bold
+    selectedLineBgColor:
+      - default
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never

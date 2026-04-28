@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+*.bak
+*.bak.*
+.bashrc.local
+bash/.bashrc.local
+nvim/.config/nvim/lazy-lock.json
+nvim/.config/nvim/.netrwhist
+.idea/
+.vscode/

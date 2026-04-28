@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"python3 - <<'EOF'\\nimport json\\np = '/home/mbilski/dotfiles/fastfetch/.config/fastfetch/config.jsonc'\\ndata = open(p,'rb').read().decode()\\nfixed = data.replace('\\\\x1b', '\\\\\\\\u001b')\\nopen...",
+  "error": "Exit code 1\nTraceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\n  File \"/usr/lib/python3.14/json/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/usr/lib/python3.14/json/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/json/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once...",
+  "timestamp": "2026-04-28T11:48:41.468Z",
+  "retry_count": 1
+}

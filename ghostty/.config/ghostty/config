@@ -1,0 +1,20 @@
+theme = Vague
+background = #000000
+font-size = 13
+font-family = CaskaydiaMono Nerd Font Mono
+
+window-theme = ghostty
+confirm-close-surface = false
+resize-overlay = never
+
+keybind = shift+insert=paste_from_clipboard
+keybind = control+insert=copy_to_clipboard
+keybind = super+control+shift+alt+arrow_down=resize_split:down,100
+keybind = super+control+shift+alt+arrow_up=resize_split:up,100
+keybind = super+control+shift+alt+arrow_left=resize_split:left,100
+keybind = super+control+shift+alt+arrow_right=resize_split:right,100
+
+mouse-scroll-multiplier = 0.95
+
+macos-titlebar-style = hidden
+macos-option-as-alt = true
