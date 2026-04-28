@@ -1,0 +1,7 @@
+FNS_DIR="$HOME/.bashrc.d/fns"
+if [[ -d "$FNS_DIR" ]]; then
+  for f in "$FNS_DIR"/*; do
+    [[ -f "$f" ]] && . "$f"
+  done
+fi
+unset FNS_DIR

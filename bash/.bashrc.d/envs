@@ -1,0 +1,13 @@
+export EDITOR=nvim
+export VISUAL=nvim
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME=ansi
+
+export PATH="$HOME/.local/bin:$PATH"
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+if [[ -d "$HOME/google-cloud-sdk" ]]; then
+  [[ -f "$HOME/google-cloud-sdk/path.bash.inc" ]] && . "$HOME/google-cloud-sdk/path.bash.inc"
+fi

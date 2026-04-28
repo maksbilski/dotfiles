@@ -23,6 +23,10 @@ brew "bat"
 brew "jq"
 brew "tree"
 brew "wget"
+brew "zoxide"
+brew "gum"
+brew "ffmpeg"
+brew "imagemagick"
 
 # Dev tools
 brew "neovim"

@@ -32,22 +32,40 @@ Each top-level dir is a self-contained "package" mirroring `$HOME`. `scripts/lin
 
 ```
 dotfiles/
-├── aerospace/.aerospace.toml          → ~/.aerospace.toml
-├── alacritty/.config/alacritty/…      → ~/.config/alacritty/…
-├── bash/.bashrc, .bash_profile        → ~/.bashrc, ~/.bash_profile
-├── btop/.config/btop/…                → ~/.config/btop/…
-├── fastfetch/.config/fastfetch/…      → ~/.config/fastfetch/…
-├── ghostty/.config/ghostty/config     → ~/.config/ghostty/config
-├── git/.gitconfig                     → ~/.gitconfig
-├── kitty/.config/kitty/kitty.conf     → ~/.config/kitty/kitty.conf
-├── lazygit/.config/lazygit/…          → ~/.config/lazygit/…
-├── nvim/.config/nvim/…                → ~/.config/nvim/…
-├── starship/.config/starship.toml     → ~/.config/starship.toml
-├── tmux/.tmux.conf                    → ~/.tmux.conf
+├── aerospace/.aerospace.toml             → ~/.aerospace.toml
+├── alacritty/.config/alacritty/…         → ~/.config/alacritty/…
+├── bash/
+│   ├── .bashrc, .bash_profile            → ~/.bashrc, ~/.bash_profile
+│   ├── .bashrc.d/{envs,shell,aliases,functions,init,inputrc}
+│   │                                     → ~/.bashrc.d/…
+│   └── .bashrc.d/fns/{compression,ssh-port-forwarding,
+│                      tmux,transcoding,worktrees}
+│                                         → ~/.bashrc.d/fns/…
+├── btop/.config/btop/…                   → ~/.config/btop/…
+├── fastfetch/.config/fastfetch/…         → ~/.config/fastfetch/…
+├── ghostty/.config/ghostty/config        → ~/.config/ghostty/config
+├── git/.gitconfig                        → ~/.gitconfig
+├── kitty/.config/kitty/kitty.conf        → ~/.config/kitty/kitty.conf
+├── lazygit/.config/lazygit/…             → ~/.config/lazygit/…
+├── nvim/.config/nvim/…                   → ~/.config/nvim/…
+├── starship/.config/starship.toml        → ~/.config/starship.toml
+├── tmux/.config/tmux/tmux.conf           → ~/.config/tmux/tmux.conf
 ├── Brewfile
 ├── macos/defaults.sh
 └── scripts/{install,link,unlink}.sh
 ```
+
+### Bash structure
+
+`.bashrc` is minimal — it sets up Homebrew's `shellenv` and then sources files from `~/.bashrc.d/` in order. Mirrors the omarchy split so individual concerns stay editable:
+
+- **envs** — `EDITOR`, `BAT_THEME`, `PATH` additions, bun, gcloud
+- **shell** — history, bash-completion (Homebrew path), `set +h` for mise
+- **aliases** — eza/fzf/zoxide wrappers, `cx`/`claude`/`d`/`g` shortcuts
+- **functions** — sources every file in `fns/`
+- **init** — `mise activate`, `starship init`, `zoxide init`, `fzf --bash`, `gh completion`
+- **inputrc** — readline tweaks (history search on arrows, menu-complete on tab)
+- **fns/** — `compress`, `ga`/`gd` (worktrees), `tdl`/`tdlm`/`tsl` (tmux dev layouts), `fip`/`dip`/`lip` (ssh port forwards), `transcode-video-*` / `img2jpg-*` (ffmpeg + magick)
 
 ## Keybindings (AeroSpace)
 
