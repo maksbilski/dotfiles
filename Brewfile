@@ -1,5 +1,4 @@
 # Taps
-tap "homebrew/bundle"
 tap "nikitabobko/tap"
 tap "FelixKratz/formulae"
 
@@ -39,7 +38,7 @@ brew "node"
 brew "python@3.12"
 
 # Window manager + helpers
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 cask "raycast"
 cask "hammerspoon"
 cask "karabiner-elements"
@@ -52,13 +51,13 @@ cask "alacritty"
 cask "kitty"
 
 # Apps from Hyprland config
-cask "google-chrome"
 cask "spotify"
-cask "signal"
-cask "obsidian"
 cask "1password"
-cask "cursor"
 
 # Fonts
 cask "font-caskaydia-mono-nerd-font"
 cask "font-caskaydia-cove-nerd-font"
+cask "font-sf-pro"
+cask "font-hack-nerd-font"
+cask "font-sketchybar-app-font"
+cask "font-sf-mono"

@@ -26,7 +26,6 @@ elif [[ -x /usr/local/bin/brew ]]; then
 fi
 
 echo "==> brew bundle"
-brew tap homebrew/bundle 2>/dev/null || true
 brew bundle --file="$DOTFILES/Brewfile"
 
 bash "$DOTFILES/scripts/link.sh"
