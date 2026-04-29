@@ -55,7 +55,8 @@ defaults write com.apple.screencapture type -string "png"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Menu bar: show battery percentage
+# Menu bar: auto-hide, show battery percentage
+defaults write NSGlobalDomain _HIHideMenuBar -bool true
 defaults write com.apple.controlcenter "NSStatusItem Visible Battery" -bool true
 
 # Restart affected apps
