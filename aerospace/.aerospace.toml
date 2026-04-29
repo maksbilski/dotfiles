@@ -117,9 +117,6 @@ cmd-shift-e = 'exec-and-forget open https://app.hey.com'
 cmd-shift-y = 'exec-and-forget open https://youtube.com/'
 cmd-shift-x = 'exec-and-forget open https://x.com/'
 
-# Close focused window (mirrors Hyprland SUPER+Q)
-alt-c = 'close'
-
 # App launcher (Raycast)
 alt-r = 'exec-and-forget open -a Raycast'
 
