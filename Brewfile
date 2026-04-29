@@ -43,6 +43,7 @@ cask "aerospace"
 cask "raycast"
 cask "hammerspoon"
 brew "sketchybar"
+brew "borders"
 
 # Terminals
 cask "ghostty"
