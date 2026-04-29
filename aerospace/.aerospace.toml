@@ -22,12 +22,12 @@ automatically-unhide-macos-hidden-apps = false
 preset = 'qwerty'
 
 [gaps]
-inner.horizontal = 0
-inner.vertical   = 0
-outer.left       = 0
+inner.horizontal = 4
+inner.vertical   = 4
+outer.left       = 4
 outer.bottom     = 0
 outer.top        = 0
-outer.right      = 0
+outer.right      = 4
 
 [mode.main.binding]
 
@@ -116,6 +116,12 @@ cmd-shift-c = 'exec-and-forget open https://app.hey.com/calendar/weeks/'
 cmd-shift-e = 'exec-and-forget open https://app.hey.com'
 cmd-shift-y = 'exec-and-forget open https://youtube.com/'
 cmd-shift-x = 'exec-and-forget open https://x.com/'
+
+# Close focused window (mirrors Hyprland SUPER+Q)
+alt-c = 'close'
+
+# App launcher (Raycast)
+alt-r = 'exec-and-forget open -a Raycast'
 
 # Reload config
 alt-shift-c = 'reload-config'
