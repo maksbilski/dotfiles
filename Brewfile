@@ -42,6 +42,7 @@ brew "python@3.12"
 cask "aerospace"
 cask "raycast"
 cask "hammerspoon"
+cask "karabiner-elements"
 brew "sketchybar"
 brew "borders"
 

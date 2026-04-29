@@ -1,0 +1,100 @@
+{
+  "global": {
+    "show_in_menu_bar": true,
+    "show_profile_name_in_menu_bar": false
+  },
+  "profiles": [
+    {
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "iso"
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_built_in_keyboard": true
+          },
+          "ignore": false,
+          "treat_as_built_in_keyboard": true
+        }
+      ],
+      "simple_modifications": [],
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "cmd + space (when fn is held) → ctrl + space (tmux prefix)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": ["left_command"],
+                    "optional": ["any"]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "fn_held",
+                    "value": 1
+                  }
+                ],
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_control"]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "fn → left_command (Linux Ctrl-style copy/paste muscle memory) + track held state",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "fn",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  { "set_variable": { "name": "fn_held", "value": 1 } },
+                  { "key_code": "left_command" }
+                ],
+                "to_after_key_up": [
+                  { "set_variable": { "name": "fn_held", "value": 0 } }
+                ]
+              }
+            ]
+          },
+          {
+            "description": "ISO §/± key → backtick/tilde (via non_us_backslash)",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "grave_accent_and_tilde",
+                  "modifiers": { "mandatory": ["shift"] }
+                },
+                "to": [{ "key_code": "non_us_backslash" }]
+              },
+              {
+                "type": "basic",
+                "from": { "key_code": "grave_accent_and_tilde" },
+                "to": [
+                  {
+                    "key_code": "non_us_backslash",
+                    "modifiers": ["left_shift"]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

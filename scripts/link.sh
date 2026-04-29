@@ -18,6 +18,7 @@ PACKAGES=(
   fastfetch
   aerospace
   sketchybar
+  karabiner
 )
 
 mkdir -p "$BACKUP_DIR"
