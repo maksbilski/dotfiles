@@ -17,6 +17,7 @@ PACKAGES=(
   btop
   fastfetch
   aerospace
+  sketchybar
 )
 
 mkdir -p "$BACKUP_DIR"

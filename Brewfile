@@ -1,6 +1,7 @@
 # Taps
 tap "homebrew/bundle"
 tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
 
 # Shell + core
 brew "bash"
@@ -41,6 +42,7 @@ brew "python@3.12"
 cask "aerospace"
 cask "raycast"
 cask "hammerspoon"
+brew "sketchybar"
 
 # Terminals
 cask "ghostty"
